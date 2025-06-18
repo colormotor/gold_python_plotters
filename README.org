@@ -1,57 +1,5 @@
 #+title: Summer session: Drawing machines and robots
 
-* Setting up Python and py5canvas
-** Dependencies
-The main requirements for Py5Canvas are [[https://numpy.org][NumPy]], [[https://matplotlib.org][Matplotlib]], [[https://pycairo.readthedocs.io/en/latest/][pyCairo]] and [[https://pyglet.readthedocs.io/en/latest/][Pyglet]]. Pyglet is only necessary if you want to use interactivity but it will be automatically installed with the procedure described in the next section. To fully use the Canvas API with video input, you will also need [[https://opencv.org][OpenCV]], The instructions below include it, but it is not essential.
-The dependency installation procedure depends on the [[https://docs.conda.io/en/latest/][conda package mananger]]. With many different options, one ideal way to install conda is to use the reduced [[https://github.com/conda-forge/miniforge][miniforge]] installer (saves disk space). To speed up installation, it is recommended to install [[https://mamba.readthedocs.io/en/latest/][mamba]] alongside conda (since "vanilla" conda is written in Python and can be extremely slow). Once a version of conda is installed, install mamba with:
-#+begin_example
-conda install conda-forge::mamba
-#+end_example
-Afterwards, you can pretty much replace any use of ~conda~ with ~mamba~ and things will go significantly faster.
-
-You might want to create a conda Python environment before going forward, which means you will be able to install the dependencies without interfering with your base Python installation. To do so you can do:
-#+begin_example
-conda create -n py5 python=3.10
-#+end_example
-and then
-#+begin_example
-conda activate py5
-#+end_example
-
-Finally, install the required dependencies with (use mamba if installed):
-#+begin_example
-conda install -c conda-forge numpy matplotlib pycairo opencv
-#+end_example
-
-** Installing py5canvas with pip
-py5canvas is still not on PyPi, so for the moment you can use one of the following to install:
-#+begin_example
-pip install git+https://github.com/colormotor/py5canvas.git
-#+end_example
-To update the module to its latest version use
-#+begin_example
-pip install --upgrade  --force-reinstall --no-deps git+https://github.com/colormotor/py5canvas.git
-#+end_example
-
-Then install the latest version of Pyglet with
-#+begin_example
-pip install pyglet
-#+end_example
-
-
-** Install locally with pip
-With this procedure, you will be able to pull the latest changes to the module with git. Firt, clone the repository in a given directory, e.g. with
-#+begin_example
-git clone https://github.com/colormotor/py5canvas.git
-#+end_example
-or by using your Git frontend of choice.
-Then navigate to the ~py5canvas~ directory and install locally with
-#+begin_example
-pip install -e .
-#+end_example
-Now any modification to the code in the directory will be always available when you import hte module.
-
-
 * Links
 :PROPERTIES:
 :CUSTOM_ID: links
