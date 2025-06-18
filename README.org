@@ -40,6 +40,8 @@
   bindings that are easy to integrate with NumPy.
 - [[https://pycairo.readthedocs.io/en/latest/][PyCairo]] For 2d vector
   graphics (py5canvas wraps this for drawing).
+** Other machines
+- [[https://github.com/Line-us/Line-us-Programming/blob/master/README.md#simple-python-example][LineUs]]
 
 ** Axidraw related links
 :PROPERTIES:
