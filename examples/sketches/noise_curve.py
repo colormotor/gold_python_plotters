@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from py5canvas import canvas
+from py5canvas import *
 import numpy as np
 
 # For this to work you will need to `pip install perlin-noise`
@@ -24,3 +24,5 @@ def draw():
             r = r1 + 10 + noise(t*10 + frame_count/100 + r1/100)*50
             curve_vertex(np.cos(t)*r, np.sin(t)*r)
         end_shape(close=True)
+
+run(show_toolbar=True)
